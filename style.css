@@ -391,12 +391,32 @@ progress::-moz-progress-bar {
   font-size: 1rem;
   font-family: inherit;
   transition: 500ms ease;
+  margin-bottom: 10px;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
   transform: scale(1.02);
+}
+
+.contact-btn {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+  background: var(--main-bg-color);
+  color: var(--off-white);
+  margin: 0 auto;
+  transition: 200ms ease-in-out;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+  background: var(--accent-bg-color)
 }
 
 /* FOOTER */
@@ -418,7 +438,7 @@ progress::-moz-progress-bar {
 }
 
 .social-link {
-  color: var(--accent-font-color);
+  color: var(--main-font-color);
   font-size: 1.5rem;
   cursor: pointer;
   display: inline-block;
