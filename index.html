@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <title>Portfolio</title>
+</head>
+<body id="home">
+  
+  <header class="header">
+    <nav id="nav-bar" class="nav-wrapper">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#portfolio">Projects</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <progress max="100" value="0"></progress>
+  </header>
+  
+
+  <main>
+    <section class="main-section hero" id="hero">
+      <div class="hero-wrapper">
+        <h1 class="hero-title">
+          <span class="hey">Hey, </span>
+          <span class="text"></span>
+          <span class="cursor">|</span>
+        </h1>
+        <p class="hero-description">Making the web a more beautiful place, one website at a time.</p>
+        <a class="hero-link" id="hero-btn" class="hero-btn" href="#portfolio">My Works</a>
+      </div>
+    </section>
+
+    <section class="main-section about" id="about">
+      <div class="about-wrapper">
+        <h2 class="about-title">About Me</h2>
+        <div class="about-skills">
+          <ul class="skills-list">
+            <li class="html skill"><i class="html-logo fab fa-html5"></i></li>
+            <li class="css skill"><i class="css-logo fab fa-css3-alt"></i></li>
+            <li class="js skill"><i class="js-logo fab fa-js-square"></i></li>
+            <li class="react skill"><i class="react-logo fab fa-react"></i></li>
+          </ul>
+        </div>
+        <div class="autobiography">
+          <div class="auto-description">
+            <div class="auto-section">
+              <h3 class="auto-title">About Me</h3>
+              <p>I LIKE ME A GOOD CROISSANT.</p>
+            </div>
+            <div class="auto-section">
+              <h3 class="auto-title">Education</h3>
+              <p>I graduated from the University of Nevada, Las Vegas in Computer Science and built a solid foundation to jumpstart my web development career.</p>
+            </div>
+            <div class="auto-section">
+              <h3 class="auto-title">Skills</h3>
+              <p>I self-taught myself HTML, CSS, JS, and React</p>
+            </div>
+          </div>
+          <div class="auto-picture">
+            <img class="selfie" src="images/chris.JPG" alt="A guy with a croissant in his mouth">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section portfolio" id="portfolio">
+      <div class="portfolio-wrapper">
+        <h2 class="portfolio-title">Projects</h2>
+        <div class="portfolio-grid">
+          <!-- <div class="grid-item"><img class="grid-img" src="./images/tributepage.png" alt=""></div>
+          <div class="grid-item"><img class="grid-img" src="./images/form.png" alt=""></div>
+          <div class="grid-item"><img class="grid-img" src="./images/landingpage.png" alt=""></div>
+          <div class="grid-item"><img class="grid-img" src="./images/technicaldocs.png" alt=""></div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section contact" id="contact">
+      <h2 class="contact-title">Let's Work on Something Together 😊</h2>
+      <p class="contact-description"><span class="contact-highlight">chochris109@gmail.com</span> or fill out</p>
+      <form id="contact-form" class="contact-form">
+        <input type="text" id="name" name="name" placeholder="Name" />
+        <input type="email" id="email" name="email" placeholder="Email" />
+        <textarea id="contact-text" rows="5" placeholder="Any Inquiries?"></textarea>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <ul class="social-links">
+        <li class="social-link"><i class="fab fa-instagram"></i></li>
+        <li class="social-link"><i class="fab fa-twitter"></i></li>
+        <li><a id="profile-link" class="social-link" target="_blank" href="https://github.com/swhtjddn"><i class="fab fa-github"></i></a></li>
+        <li class="social-link"><i class="fab fa-linkedin-in"></i></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/TextPlugin.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
