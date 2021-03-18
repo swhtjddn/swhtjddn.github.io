@@ -149,7 +149,7 @@ progress::-moz-progress-bar {
 .hero-description {
   margin: 0 0 20px;
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hero-link {
@@ -273,6 +273,17 @@ progress::-moz-progress-bar {
   border-radius: 5px;
 }
 
+@media (max-width: 600px) {
+  .skill i {
+    font-size: 3rem;
+  }
+
+  .autobiography {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /* PORTFOLIO */
 .portfolio {
   padding: 2em;
@@ -297,7 +308,7 @@ progress::-moz-progress-bar {
 
 .grid-item {
   color: white;
-  width: 30%;
+  flex-basis: 30%;
   transition: 300ms ease;
   margin-bottom: 10px;
 }
@@ -316,6 +327,12 @@ progress::-moz-progress-bar {
 .project-name {
   font-size: 1.1rem;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-item {
+    flex-basis: 45%;
+  }
 }
 
 
