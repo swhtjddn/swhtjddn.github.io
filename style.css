@@ -215,6 +215,7 @@ progress::-moz-progress-bar {
 .skills-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   max-width: 800px;
 }
@@ -244,6 +245,7 @@ progress::-moz-progress-bar {
   max-width: 1000px;
   margin: 0 auto;
   justify-content: space-between;
+  align-items: center;
 }
 
 .auto-title {
@@ -285,18 +287,19 @@ progress::-moz-progress-bar {
 }
 
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
-  grid-template-rows: 300px 300px;
-  max-width: 900px;
+  display: flex;
+  max-width: 1000px;
   margin: 0 auto;
-  gap: 0 0;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .grid-item {
-  background:rgb(35, 18, 129);
   color: white;
+  width: 30%;
   transition: 300ms ease;
+  margin-bottom: 10px;
 }
 
 .grid-item:hover,
@@ -388,7 +391,7 @@ progress::-moz-progress-bar {
 }
 
 .footer-wrapper {
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 
