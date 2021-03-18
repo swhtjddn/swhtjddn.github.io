@@ -1,3 +1,19 @@
+/* Mobile Navigation */
+
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav-link');
+const hamburger = document.querySelector('.hamburger');
+
+navToggle.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        document.body.classList.remove('nav-open');
+    })
+});
+
 gsap.registerPlugin(ScrollTrigger);
 
 const descriptors = ['I\'m Chris Cho.']
