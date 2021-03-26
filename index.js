@@ -115,7 +115,7 @@ gsap.from(".about-animation", {
         toggleActions: "play reverse play reverse",
     },
     opacity: 0,
-    y: "-=50",
+    x: "-=100",
     stagger: 0.1 
 });
 
@@ -129,7 +129,7 @@ let projectTl = gsap.timeline({
 })
     .from(".portfolio-title", {
         duration: .25,
-        y: "-=50",
+        x: "+=50",
         opacity: 0
     })
 

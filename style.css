@@ -28,6 +28,7 @@ body {
   margin: 0;
   padding: 0;
   background: var(--main-bg-color);
+  overflow-x: hidden;
 }
 
 ul {
@@ -325,6 +326,18 @@ progress::-moz-progress-bar {
   color: var(--off-white);
 }
 
+
+.about-title::before {
+  content: ' ';
+  position: absolute;
+  width: 4em;
+  background: linear-gradient(to right, var(--accent-bg-color), var(--main-font-color));
+  height: .5em;
+  bottom: 0px;
+  z-index: -1;
+  margin-left: 0;
+}
+
 .about-skills {
   margin-bottom: 50px;
 }
@@ -412,6 +425,17 @@ progress::-moz-progress-bar {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.portfolio-title::before {
+  content: ' ';
+  position: absolute;
+  width: 3em;
+  background: linear-gradient(to right, var(--accent-bg-color), var(--main-font-color));
+  height: .5em;
+  bottom: 0px;
+  z-index: -1;
+  margin-left: 0;
 }
 
 .portfolio-grid {
