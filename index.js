@@ -14,6 +14,18 @@ navLinks.forEach(link => {
     })
 });
 
+/* Project Buttons */
+
+const handleGridClick = (e) => {
+    e.target.parentNode.classList.add('modal');
+    e.target.parentNode.firstChild.classList.add('small-img');
+}
+
+const gridBtns = [...document.getElementsByClassName('grid-btn')];
+gridBtns.forEach(btn => btn.addEventListener('click', handleGridClick));
+
+/* Animations */
+
 gsap.registerPlugin(ScrollTrigger);
 
 const descriptors = ['I\'m Chris Cho.']
@@ -62,50 +74,6 @@ gsap.from(".hero-wrapper", {
     opacity: 0
 })
 
-// let aboutTl = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: ".about-wrapper",
-//         start: "top 70%",
-//         end: "bottom 10%",
-//         toggleActions: "play reverse play reverse",
-//     }
-// })
-//     .from(".about-title", {
-//         stagger: 0.1,
-//         duration: .25,
-//         y: "-=50",
-//         opacity: 0
-//     })
-//     .from(".html", {
-//         duration: .25,
-//         y: "-=50",
-//         opacity: 0
-//     })
-//     .from(".css", {
-//         duration: .25,
-//         y: "-=50",
-//         opacity: 0
-//     })
-//     .from(".js", {
-//         duration: .25,
-//         y: "-=50",
-//         opacity: 0
-//     })
-//     .from(".react", {
-//         duration: .25,
-//         y: "-=50",
-//         opacity: 0
-//     })
-//     .from(".auto-description", {
-//         duration: .2,
-//         y: "-=50",
-//         opacity: 0
-//     })
-//     .from(".selfie", {
-//         duration: .2,
-//         y: "-=50",
-//         opacity: 0
-//     })
 
 gsap.from(".about-animation", {
     scrollTrigger: {
@@ -135,16 +103,14 @@ let projectTl = gsap.timeline({
 
 
 gsap.defaults({ease: "power3"});
-gsap.set(".grid-item", {y: 50});
+gsap.set(".grid-item", {y: 100});
 
 ScrollTrigger.batch(".grid-item", {
-    onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: {each: 0.15, grid: [1, 3]}, overwrite: true}),
-    onLeave: batch => gsap.set(batch, {opacity: 0, y: -100, overwrite: true}),
-    onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
-    onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 100, overwrite: true})
+    start: "top bottom-=100px",
+    onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: .15}),
+    onLeaveBack: batch => gsap.to(batch, {opacity: 0, y: 100})
 });
     
-ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".grid-item", {y: 0}));
 
 let contact = gsap.timeline({
     scrollTrigger: {

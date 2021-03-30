@@ -316,7 +316,7 @@ progress::-moz-progress-bar {
 /* ABOUT */
 .about {
   background: linear-gradient(rgb(80, 80, 80) 60%, rgb(65, 65, 65));
-  padding: 30px;
+  padding: 30px 30px 100px;
 }
 
 .about-title {
@@ -449,20 +449,58 @@ progress::-moz-progress-bar {
 
 .grid-item {
   color: white;
-  flex-basis: 30%;
-  transition: 300ms ease;
-  margin-bottom: 10px;
+  width: 45%;
+  margin-bottom: 20px;
 }
 
-.grid-item:hover,
-.grid-item:focus {
-  transform: scale(1.04);
+.grid-item:hover .grid-btn {
+  visibility: visible;
+}
+
+.grid-btn {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: var(--accent-bg-color);
+  border: none;
+  box-shadow: 0px 0px 10px 1px var(--box-shadow);
+  color: var(--off-white);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.grid-item-container {
+  transition: 300ms ease;
+  opacity: 50%;
+}
+
+.grid-item-container:hover,
+.grid-item-container:focus {
+  transform: scale(1.05);
+  opacity: 100%;
+}
+
+.project-description {
+  text-align: center;
+  line-height: 1.5;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .grid-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .project-name {
