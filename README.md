@@ -5,7 +5,7 @@ The live version can be found [here](https://chrischo.dev)
 
 ## Technologies
 This project is created with: 
-*HTML5
-*CSS
-*Javascript
-*GSAP
+* HTML5
+* CSS
+* Javascript
+* GSAP
