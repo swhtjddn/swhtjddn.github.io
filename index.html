@@ -38,8 +38,12 @@
           <span class="text"></span>
           <span class="cursor">|</span>
         </h1>
-        <p class="hero-description">Making the web a more beautiful place, one website at a time.</p>
-        <a class="hero-link" id="hero-btn" class="hero-btn" href="#portfolio">My Works</a>
+        <p class="hero-description">Full Stack Web Developer.</p>
+        <a class="hero-link" id="hero-btn" class="hero-btn" href="#portfolio">My Works</a>  
+      </div>
+      <div class="scroll-btn">
+        <p class="scroll-description">SCROLL</p>
+        <i class="down-animate fas fa-arrow-down"></i>
       </div>
     </section>
 
@@ -57,15 +61,24 @@
         <div class="autobiography">
           <div class="auto-description about-animation">
             <div class="auto-section about-animation">
-              <h3 class="auto-title">About Me</h3>
+              <h3>About</h3>
+              <p>Hi! I'm Chris Cho. I'm very passionate about bringing together beautiful user interfaces, with a good, functional user experience.</p>
             </div>
             <div class="auto-section about-animation">
               <h3 class="auto-title">Education</h3>
               <p>I graduated from the University of Nevada, Las Vegas in Computer Science and built a solid foundation to jumpstart my web development career.</p>
             </div>
             <div class="auto-section about-animation">
-              <h3 class="auto-title">Skills</h3>
-              <p>I self-taught myself HTML, CSS, JS, and React.</p>
+              <h3 class="auto-title">Skills & Technologies</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS & SASS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
             </div>
           </div>
           <div class="auto-picture about-animation">
@@ -82,21 +95,21 @@
           <div class="grid-item">
             <div class="grid-item-container">
               <img class="grid-img" src="./images/portfolio.png" alt="">
-              <a href="https://github.com/swhtjddn/swhtjddn.github.io" class="grid-btn">Github</a>
+              <a href="https://github.com/swhtjddn/swhtjddn.github.io" class="grid-btn">Github<i class="icon-btn fab fa-github"></i></a>
               <p class="project-description">My portfolio page made with pure HTML, CSS & Javascript. Animations made with GSAP</p>
             </div>
           </div>
           <div class="grid-item">
             <div class="grid-item-container">
               <img class="grid-img" src="./images/lashsociety.png" alt="">
-              <button class="grid-btn">View Details</button>
+              <a href="https://lashsocietylv.com" target="_blank" class="grid-btn">Live Website</a>
               <p class="project-description">A website made with pure HTML, CSS & Javascript, and animations with GSAP for a salon company </p>
             </div>
           </div>
           <div class="grid-item">
             <div class="grid-item-container">
               <img class="grid-img" src="./images/inventory.png" alt="">
-              <button class="grid-btn">View details</button>
+              <button class="grid-btn">Video Demo</button>
               <p class="project-description">Full stack web application for an inventory system made with MongoDB, Express, React & Node.js</p>
             </div>
           </div>
@@ -108,9 +121,10 @@
       <h2 class="contact-title">Let's Work on Something Together 😊</h2>
       <p class="contact-description"><span class="contact-highlight">chochris109@gmail.com</span> or fill out</p>
       <form id="contact-form" class="contact-form">
-        <input type="text" id="name" name="name" placeholder="Name" />
-        <input type="email" id="email" name="email" placeholder="Email" />
-        <textarea id="contact-text" rows="5" placeholder="Any Inquiries?"></textarea>
+        <input type="text" id="name" name="name" placeholder="Name *" required />
+        <input type="email" id="email" name="email" placeholder="Email *" required/>
+        <input type="text" id="subject" name="subject" placeholder="Subject *" required/>
+        <textarea id="contact-text" rows="5" placeholder="Message" required></textarea>
         <button class="contact-btn">Submit</button>
       </form>
     </section>

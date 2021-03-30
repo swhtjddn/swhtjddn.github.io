@@ -14,16 +14,6 @@ navLinks.forEach(link => {
     })
 });
 
-/* Project Buttons */
-
-const handleGridClick = (e) => {
-    e.target.parentNode.classList.add('modal');
-    e.target.parentNode.firstChild.classList.add('small-img');
-}
-
-const gridBtns = [...document.getElementsByClassName('grid-btn')];
-gridBtns.forEach(btn => btn.addEventListener('click', handleGridClick));
-
 /* Animations */
 
 gsap.registerPlugin(ScrollTrigger);
@@ -75,6 +65,12 @@ gsap.from(".hero-wrapper", {
 })
 
 
+let arrowTimeline = gsap.timeline(
+    { repeat: -1, yoyo: true })
+    .from('.down-animate', {duration: .5, alpha: .5, y: "-=5", ease: "power2.out"})
+    .to('.down-animate', {duration: .1, rotate: 10, ease: "power2.out"})
+    .to('.down-animate', {duration: .1, alpha: 1, rotate: -10, ease: "power2.out"})
+
 gsap.from(".about-animation", {
     scrollTrigger: {
         trigger: ".about-wrapper",
@@ -83,8 +79,8 @@ gsap.from(".about-animation", {
         toggleActions: "play reverse play reverse",
     },
     opacity: 0,
-    x: "-=100",
-    stagger: 0.1 
+    x: "-=50",
+    stagger: 0.10 
 });
 
 let projectTl = gsap.timeline({
@@ -103,7 +99,7 @@ let projectTl = gsap.timeline({
 
 
 gsap.defaults({ease: "power3"});
-gsap.set(".grid-item", {y: 100});
+gsap.set(".grid-item", {y: 100, opacity: 0});
 
 ScrollTrigger.batch(".grid-item", {
     start: "top bottom-=100px",
@@ -115,18 +111,18 @@ ScrollTrigger.batch(".grid-item", {
 let contact = gsap.timeline({
     scrollTrigger: {
         trigger: ".contact-title",
-        start: "top 70%",
+        start: "top 100%",
         end: "bottom top",
         toggleActions: "play reverse play reverse"
     }
 })
     .from(".contact-title", {
-        duration: .25,
+        duration: .15,
         y: "-=50",
         opacity: 0
     })
     .from(".contact-description", {
-        duration: .25,
+        duration: .15,
         y: "-=50",
         opacity: 0
     })
